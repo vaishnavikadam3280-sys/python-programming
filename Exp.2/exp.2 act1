@@ -1,0 +1,17 @@
+def check_overspeeding():
+    try:
+        speed = float(input("Enter vehicle speed (km/h): "))
+        speed_limit = 60
+
+  
+        if speed > speed_limit:
+            print(f" OVERSPEEDING! Speed: {speed} km/h")
+            print("Message: Fine Issued.")
+        else:
+            print(f" Speed normal: {speed} km/h")
+            print("Message: No fine.")
+            
+    except ValueError:
+        print("Invalid input! Please enter a numerical value.")
+
+check_overspeeding()
