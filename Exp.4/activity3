@@ -1,0 +1,9 @@
+from collections import Counter
+
+review = "The food was good, but the service was slow. The food arrived cold."
+# Normalize to lowercase and split by whitespace
+words = review.lower().split()
+word_counts = Counter(words)
+
+print(word_counts["food"])  
+print(word_counts)        
