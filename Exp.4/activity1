@@ -1,0 +1,15 @@
+# List of student marks
+marks = [85, 92, 78, 90, 88, 95, 82]
+
+# Calculate Average Mark
+# Formula: Sum of all marks / Total number of marks
+average_mark = sum(marks) / len(marks)
+
+# Find Topper Mark
+# The max() function returns the highest value in the list
+topper_mark = max(marks)
+
+# Print results
+print(f"List of Marks: {marks}")
+print(f"Average Mark: {average_mark:.2f}")
+print(f"Topper Mark: {topper_mark}")
