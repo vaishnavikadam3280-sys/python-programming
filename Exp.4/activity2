@@ -1,0 +1,7 @@
+# List of product prices
+prices = [19.99, 5.50, 12.00, 3.25]
+
+# Calculate total bill
+total_bill = sum(prices)
+
+print(f"The total bill is: ${total_bill:.2f}")
