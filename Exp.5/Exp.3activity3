@@ -1,0 +1,17 @@
+def display_seating_layout(rows, seats_per_row):
+    print("\n--- Theater Seating Layout ---")
+    print("      [Screen]\n")
+    
+    for row in range(1, rows + 1):
+        row_display = f"Row {row:2}: "
+        
+        for seat in range(1, seats_per_row + 1):
+            
+            seat_name = chr(64 + seat) 
+            row_display += f"[{seat_name}{row}] "
+            
+        print(row_display)
+    print("\n------------------------------\n")
+
+
+display_seating_layout(5, 4)
