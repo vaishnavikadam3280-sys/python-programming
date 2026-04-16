@@ -1,0 +1,10 @@
+from collections import Counter
+
+purchased_items = ['apple', 'banana', 'orange', 'apple', 'apple', 'banana', 'apple', 'orange']
+
+item_frequencies = Counter(purchased_items)
+
+# Print results
+print(item_frequencies)
+
+print(item_frequencies.most_common(2))
