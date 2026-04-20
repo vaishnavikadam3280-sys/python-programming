@@ -1,0 +1,24 @@
+
+
+f = open("expenses.txt", "w")
+
+expenses = [100, 200, 150, 250, 300]
+
+for e in expenses:
+    f.write(str(e) + "\n")
+
+f.close()
+
+
+# Read file and calculate total expense
+
+f = open("expenses.txt", "r")
+
+total = 0
+
+for line in f:
+    total += int(line)
+
+f.close()
+
+print("Total monthly expense:", total)
