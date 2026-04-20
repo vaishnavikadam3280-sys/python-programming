@@ -1,0 +1,10 @@
+name = input ("Enter your Name: ")
+age = input ("Enter your age: ")
+division = input ("Enter your division: ")
+college = input ("Enter your college: ")
+print("\n-----student information-----")
+
+print("Name:", name)
+print("Age:", age)
+print("Division:", division)
+print("College:", college)
