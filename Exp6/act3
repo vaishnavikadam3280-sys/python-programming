@@ -1,0 +1,9 @@
+f = open("report.txt", "w")
+f.write("This is a simple report file")
+f.close()
+f = open("report.txt", "r")
+text = f.read()
+words = text.split()
+print("Number of words:", len(words))
+
+f.close()
