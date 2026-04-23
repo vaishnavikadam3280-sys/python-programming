@@ -1,0 +1,23 @@
+balance = 5000 
+
+try:
+    print("Available balance:", balance)
+    
+    amount = float(input("Enter amount to withdraw: "))
+    
+    if amount <= 0:
+        print("Error: Enter a valid withdrawal amount.")
+    
+    elif amount > balance:
+        print("Error: Insufficient balance.")
+    
+    else:
+        balance -= amount
+        print("Withdrawal successful!")
+        print("Remaining balance:", balance)
+
+except ValueError:
+    print("Error: Please enter a valid number.")
+
+finally:
+    print("Transaction completed.")
