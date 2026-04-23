@@ -1,0 +1,48 @@
+class Student:
+    def __init__(self, name, grades=None):
+        self.name = name
+        self.grades = grades if grades is not None else []
+
+    def add_grade(self, grade):
+        """Adds a new grade to the list."""
+        if 0 <= grade <= 100:
+            self.grades.append(grade)
+        else:
+            print("Invalid grade. Please enter a value between 0-100.")
+
+    def calculate_average(self):
+        """Calculates the average grade."""
+        if not self.grades:
+            return 0
+        return sum(self.grades) / len(self.grades)
+
+    def get_letter_grade(self):
+        """Determines the letter grade (A, B, C, D, F) based on average."""
+        average = self.calculate_average()
+        if average >= 90:
+            return 'A'
+        elif average >= 80:
+            return 'B'
+        elif average >= 70:
+            return 'C'
+        elif average >= 60:
+            return 'D'
+        else:
+            return 'F'
+
+    def display_report(self):
+        """Displays the student's name, average, and letter grade."""
+        print(f"Student: {self.name}")
+        print(f"Average Grade: {self.calculate_average():.2f}")
+        print(f"Letter Grade: {self.get_letter_grade()}")
+        print("-" * 20)
+
+# Example Usage
+student1 = Student("Alice")
+student1.add_grade(85)
+student1.add_grade(90)
+student1.add_grade(78)
+student1.display_report()
+
+student2 = Student("Bob", [70, 65, 80])
+student2.display_report()
