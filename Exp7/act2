@@ -1,0 +1,26 @@
+class Employee:
+    def __init__(self, name, base_salary):
+        """Initializes employee name and base salary."""
+        self.name = name
+        self.base_salary = base_salary
+
+    def calculate_total_salary(self, bonus_percentage):
+        """Calculates the total salary including a percentage-based bonus."""
+        bonus_amount = (bonus_percentage / 100) * self.base_salary
+        total_salary = self.base_salary + bonus_amount
+        return total_salary
+
+    def display_details(self, bonus_percentage):
+        """Prints a summary of the employee's earnings."""
+        total = self.calculate_total_salary(bonus_percentage)
+        print(f"Employee: {self.name}")
+        print(f"Base Salary: ${self.base_salary:,.2f}")
+        print(f"Bonus ({bonus_percentage}%): ${((bonus_percentage/100) * self.base_salary):,.2f}")
+        print(f"Total Pay: ${total:,.2f}")
+        print("-" * 20)
+
+# Example Usage
+emp1 = Employee("Alice Smith", 50000)
+emp1.display_details(10)
+emp2 = Employee("Bob Jones", 65000)
+emp2.display_details(15)
