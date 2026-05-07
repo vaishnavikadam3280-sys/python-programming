@@ -1,0 +1,15 @@
+import random
+
+def generate_otp(length=6):
+    # Possible characters in the OTP
+    digits = "0123456789"
+    otp = ""
+    
+    # Randomly pick characters based on the length
+    for _ in range(length):
+        otp += random.choice(digits)
+        
+    return otp
+
+# Example usage
+print("Your OTP is:", generate_otp())
